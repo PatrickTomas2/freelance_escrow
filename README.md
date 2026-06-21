@@ -18,6 +18,34 @@ review. Settlement happens on-chain in 3-5 seconds at a fraction of a cent —
 making even small, frequent milestone payouts (e.g. $20-$50) economically
 viable in a way that's impossible on higher-fee networks.
 
+## Project Vision
+
+Freelancing is a primary or supplemental income source for millions of
+workers across the Philippines, Vietnam, and Indonesia. Freelance Escrow aims to
+give these freelancers the same payment protection enjoyed by workers on
+large platforms, without the platform's fees or delays, by putting the
+escrow logic directly on-chain where both parties can verify it
+independently. Long-term, Freelance Escrow is designed to plug into local Stellar
+anchors so freelancers can off-ramp earnings directly into local currency.
+
+## Key Features
+
+- **Milestone-based escrow** — a client's USDC locks into the contract upfront, split across as many milestones as the engagement needs.
+- **Automatic release on approval** — once the client approves a submitted milestone, funds move to the freelancer on-chain with no manual payout step.
+- **Built-in dispute resolution** — either party can raise a dispute, freezing the contract until a named arbitrator releases funds to one side or the other.
+- **Sub-cent, 3-5 second settlement** — powered by Soroban smart contracts on Stellar, instead of 5-7 day platform settlement.
+- **Freighter wallet integration** — connect, view a Testnet balance, and send payments directly from the browser, with no custodial intermediary.
+- **Full contract test suite** — 5 tests covering the happy path, unauthorized-caller rejection, post-transaction state verification, dispute resolution, and duplicate-submission rejection.
+
+## Future Scope
+
+- **In-app contract management** — create, submit, approve, and dispute milestones directly from the web UI instead of the Stellar CLI.
+- **USDC trustline + balance UI** — surface USDC (not just XLM) balances and trustline setup directly in the wallet panel.
+- **Local anchor off-ramp integration** — let freelancers cash out USDC into local currency through Stellar anchors in the Philippines, Vietnam, and Indonesia.
+- **Mainnet deployment** — move from Testnet to Mainnet once the contract has undergone a security audit.
+- **Multi-arbitrator / reputation-based dispute resolution** — reduce reliance on a single named arbitrator per contract.
+- **Notifications** — email or push alerts when a milestone is submitted, approved, or disputed.
+
 ## UI Screenshots
 
 ![Freelance Escrow web app in light mode: hero section, milestone how-it-works timeline, and the Stellar Testnet wallet panel](docs/screenshot.png)
@@ -30,34 +58,6 @@ The web app (`app/`) connects a Freighter wallet to Stellar Testnet as the
 settlement layer the escrow contract runs on. See [Setup Guide](#setup-guide)
 below to run it locally, or [How to Build](#how-to-build) to work with the
 Soroban contract directly.
-
-## Key Features
-
-- **Milestone-based escrow** — a client's USDC locks into the contract upfront, split across as many milestones as the engagement needs.
-- **Automatic release on approval** — once the client approves a submitted milestone, funds move to the freelancer on-chain with no manual payout step.
-- **Built-in dispute resolution** — either party can raise a dispute, freezing the contract until a named arbitrator releases funds to one side or the other.
-- **Sub-cent, 3-5 second settlement** — powered by Soroban smart contracts on Stellar, instead of 5-7 day platform settlement.
-- **Freighter wallet integration** — connect, view a Testnet balance, and send payments directly from the browser, with no custodial intermediary.
-- **Full contract test suite** — 5 tests covering the happy path, unauthorized-caller rejection, post-transaction state verification, dispute resolution, and duplicate-submission rejection.
-
-## Project Vision
-
-Freelancing is a primary or supplemental income source for millions of
-workers across the Philippines, Vietnam, and Indonesia. Freelance Escrow aims to
-give these freelancers the same payment protection enjoyed by workers on
-large platforms, without the platform's fees or delays, by putting the
-escrow logic directly on-chain where both parties can verify it
-independently. Long-term, Freelance Escrow is designed to plug into local Stellar
-anchors so freelancers can off-ramp earnings directly into local currency.
-
-## Future Scope
-
-- **In-app contract management** — create, submit, approve, and dispute milestones directly from the web UI instead of the Stellar CLI.
-- **USDC trustline + balance UI** — surface USDC (not just XLM) balances and trustline setup directly in the wallet panel.
-- **Local anchor off-ramp integration** — let freelancers cash out USDC into local currency through Stellar anchors in the Philippines, Vietnam, and Indonesia.
-- **Mainnet deployment** — move from Testnet to Mainnet once the contract has undergone a security audit.
-- **Multi-arbitrator / reputation-based dispute resolution** — reduce reliance on a single named arbitrator per contract.
-- **Notifications** — email or push alerts when a milestone is submitted, approved, or disputed.
 
 ## Timeline
 
