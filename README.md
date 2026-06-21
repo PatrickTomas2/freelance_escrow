@@ -2,6 +2,15 @@
 
 Milestone-based USDC escrow for Southeast Asian freelancers, built on Soroban.
 
+## Preview
+
+![Freelance Escrow web app: hero section, milestone how-it-works timeline, and the Stellar Testnet wallet panel](docs/screenshot.png)
+
+The web app (`app/`) connects a Freighter wallet to Stellar Testnet as the
+settlement layer the escrow contract runs on. See [Setup Guide](#setup-guide)
+below to run it locally, or [How to Build](#how-to-build) to work with the
+Soroban contract directly.
+
 ## Problem
 
 A freelancer in Cebu City, Manila, Ho Chi Minh City, or Jakarta delivers work
