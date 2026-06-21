@@ -1,4 +1,4 @@
-//! Test suite for KawaniPayContract.
+//! Test suite for FreelanceEscrowContract.
 //! Exactly 5 tests as required: happy path, edge/failure case, and state
 //! verification, plus two supporting flow tests for dispute handling.
 #![cfg(test)]
@@ -29,8 +29,8 @@ fn test_happy_path_full_milestone_flow() {
     let env = Env::default();
     env.mock_all_auths();
 
-    let contract_id = env.register(KawaniPayContract, ());
-    let client_handle = KawaniPayContractClient::new(&env, &contract_id);
+    let contract_id = env.register(FreelanceEscrowContract, ());
+    let client_handle = FreelanceEscrowContractClient::new(&env, &contract_id);
 
     let client_addr = Address::generate(&env);
     let freelancer = Address::generate(&env);
@@ -71,8 +71,8 @@ fn test_unauthorized_approver_fails() {
     let env = Env::default();
     env.mock_all_auths();
 
-    let contract_id = env.register(KawaniPayContract, ());
-    let client_handle = KawaniPayContractClient::new(&env, &contract_id);
+    let contract_id = env.register(FreelanceEscrowContract, ());
+    let client_handle = FreelanceEscrowContractClient::new(&env, &contract_id);
 
     let client_addr = Address::generate(&env);
     let freelancer = Address::generate(&env);
@@ -110,8 +110,8 @@ fn test_state_after_single_milestone_payout() {
     let env = Env::default();
     env.mock_all_auths();
 
-    let contract_id = env.register(KawaniPayContract, ());
-    let client_handle = KawaniPayContractClient::new(&env, &contract_id);
+    let contract_id = env.register(FreelanceEscrowContract, ());
+    let client_handle = FreelanceEscrowContractClient::new(&env, &contract_id);
 
     let client_addr = Address::generate(&env);
     let freelancer = Address::generate(&env);
@@ -159,8 +159,8 @@ fn test_dispute_raised_and_resolved_to_freelancer() {
     let env = Env::default();
     env.mock_all_auths();
 
-    let contract_id = env.register(KawaniPayContract, ());
-    let client_handle = KawaniPayContractClient::new(&env, &contract_id);
+    let contract_id = env.register(FreelanceEscrowContract, ());
+    let client_handle = FreelanceEscrowContractClient::new(&env, &contract_id);
 
     let client_addr = Address::generate(&env);
     let freelancer = Address::generate(&env);
@@ -206,8 +206,8 @@ fn test_cannot_resubmit_approved_milestone() {
     let env = Env::default();
     env.mock_all_auths();
 
-    let contract_id = env.register(KawaniPayContract, ());
-    let client_handle = KawaniPayContractClient::new(&env, &contract_id);
+    let contract_id = env.register(FreelanceEscrowContract, ());
+    let client_handle = FreelanceEscrowContractClient::new(&env, &contract_id);
 
     let client_addr = Address::generate(&env);
     let freelancer = Address::generate(&env);

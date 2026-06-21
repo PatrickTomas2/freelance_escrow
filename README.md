@@ -1,4 +1,4 @@
-# KawaniPay
+# Freelance Escrow
 
 Milestone-based USDC escrow for Southeast Asian freelancers, built on Soroban.
 
@@ -12,7 +12,7 @@ work. Traditional payment platforms charge 10-20% in combined fees and take
 
 ## Solution
 
-KawaniPay locks a client's USDC into a Soroban smart contract at the start of
+Freelance Escrow locks a client's USDC into a Soroban smart contract at the start of
 a freelance engagement, broken into milestones. Funds release to the
 freelancer automatically once the client approves each milestone, and either
 party can raise a dispute that freezes the contract for arbitrator review.
@@ -37,11 +37,11 @@ Designed for a hackathon build cycle:
 ## Vision and Purpose
 
 Freelancing is a primary or supplemental income source for millions of
-workers across the Philippines, Vietnam, and Indonesia. KawaniPay aims to
+workers across the Philippines, Vietnam, and Indonesia. Freelance Escrow aims to
 give these freelancers the same payment protection enjoyed by workers on
 large platforms, without the platform's fees or delays, by putting the
 escrow logic directly on-chain where both parties can verify it
-independently. Long-term, KawaniPay is designed to plug into local Stellar
+independently. Long-term, Freelance Escrow is designed to plug into local Stellar
 anchors so freelancers can off-ramp earnings directly into local currency.
 
 ## Prerequisites

@@ -1,4 +1,4 @@
-//! KawaniPay — Milestone Escrow Contract for Freelancers
+//! Freelance Escrow — Milestone Escrow Contract for Freelancers
 //!
 //! Allows a client to deposit USDC into escrow for a freelance contract,
 //! split across milestones. Freelancer submits work per milestone; client
@@ -81,10 +81,10 @@ pub enum Error {
 // ---------------------------------------------------------------------
 
 #[contract]
-pub struct KawaniPayContract;
+pub struct FreelanceEscrowContract;
 
 #[contractimpl]
-impl KawaniPayContract {
+impl FreelanceEscrowContract {
     /// Creates a new escrow contract and pulls the total milestone amount
     /// from the client's wallet into this contract's custody.
     ///

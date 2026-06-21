@@ -1,0 +1,19 @@
+# Rust / Soroban build output
+target/
+
+# Editors / IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Claude Code local, machine-specific settings (not shared with the team)
+.claude/settings.local.json
+
+# Env files
+.env
+.env.local
+.env*.local
